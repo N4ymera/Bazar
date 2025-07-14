@@ -11,7 +11,6 @@ body {
 
 body *{
     font-family: 'Inter', sans-serif;
-    color: white;
 }
 
 #container {
@@ -35,6 +34,10 @@ body *{
     font-weight: 500;
     line-height: 24px;
     margin-top: 8px;
+}
+
+#profile h1 {
+    color: white;
 }
 
 /*links*/
@@ -64,11 +67,19 @@ ul li a {
 
     text-decoration: none;
     font-weight: 500;
+    
+    color: white;
 }
 
 ul li a:hover {
     background: rgba(255, 255, 255, 0.5);
     border: 1.5px solid white;
+}
+
+ul li a:focus {
+    outline: 2px solid white;
+    outline-offset: 4px;
+    box-shadow: 0 0 0 4px rgba(255, 255, 255, 0.5));
 }
 
 footer {
@@ -80,4 +91,14 @@ footer {
 
 footer a {
     color: black;
+}
+
+@media (max-width: 400px) {
+    #container {
+        padding: 0 16px;
+    }
+    ul li a {
+        padding: 14px 20px;
+        font-size: 0.95rem;
+    }
 }
