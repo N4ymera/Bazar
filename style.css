@@ -5,9 +5,9 @@
 }
 
 body {
-    background: url(./assets/Bg.jpg) no-repeat top center/cover;
+    background: url(./assets/Bg.png) no-repeat top center/cover; /* Fallback para navegadores antigos */
+    background: url(./assets/BgWEBP.webp) no-repeat top center/cover; /* Prioritário para navegadores modernos */
     height: 100vh;
-    background: url(./assets/BgWEBP.webp) no-repeat top center/cover;
 }
 
 body *{
@@ -70,6 +70,8 @@ ul li a {
     font-weight: 500;
     
     color: white;
+
+    transition: background 0.3s ease, border 0.3s ease;
 }
 
 ul li a:hover {
@@ -87,11 +89,34 @@ footer {
     padding: 24px 0;
     text-align: center;
     font-size: 14px;
-    color: black;
+    color: rgba(255, 255, 255, 0.7);
 }
 
 footer a {
-    color: black;
+    color: white;
+    text-decoration: none;
+    position: relative;
+    overflow: hidden;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+footer a::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: white;
+    transform-origin: bottom right;
+    transition: transform 0.3s ease-out;
+}
+
+footer a:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
 }
 
 @media (max-width: 400px) {
