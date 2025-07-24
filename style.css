@@ -5,7 +5,7 @@
 }
 
 body {
-    background: url(./assets/Bg.png) no-repeat top center/cover; /* Fallback para navegadores antigos */
+    background: url(./assets/BgWEBP.webp) no-repeat top center/cover; /* Fallback para navegadores antigos */
     background: url(./assets/BgWEBP.webp) no-repeat top center/cover; /* Prioritário para navegadores modernos */
     height: 100vh;
 }
